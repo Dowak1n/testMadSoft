@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+.test-container {
+  padding: 12px 24px;
+}
+
+.progress-indicators-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.progress-indicators-element {
+  width: 100%;
+  height: 10px;
+}
+
+.question-title {
+  font-size: 3em;
+}
+
+.testing-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 26px;
+}
+
+.testing-header-title {
+  font-size: 2.5em;
+  margin-right: 25px;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  cursor: pointer;
+  color: blue;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ul-no-bullets {
+  list-style-type: none;
+  padding: 0;
+}
+
+.testing-header-time {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+.radio-type-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice-test {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.choice-test-text {
+  margin-right: 12px;
+}
+
+.test-button {
+  background: rgb(209, 59, 59);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  margin-top: 18px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background: rgb(171, 55, 55);
+}
+
+.test-button:active {
+  background: #a52f2f;
+}
+
+.test-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  box-shadow: none; /* Отключить тень для неактивной кнопки */
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #d13b3b;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label
+{
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #d13b3b;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
